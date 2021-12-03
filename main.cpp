@@ -1,6 +1,22 @@
 double my_pow(double x, unsigned int n)
 {
-	if (n == 0) return 1;
-	for (i = 0; i < n; i++) x *= x;
-	return x;
+	double result = 1;
+
+	if (n < 0)
+	{
+		n = -n;
+		for (long i = 0; i < n; i++)
+		{
+			result *= x;
+		}
+		return 1 / result;
+	}
+	else
+	{
+		for (long i = 0; i < n; i++)
+		{
+			result *= x;
+		}
+		return result;
+	}
 };
